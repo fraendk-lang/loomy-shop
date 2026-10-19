@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Loomy – Handgestrickt im Punjab</title>
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#F6EFE6; --surface:#FFFDF9; --ink:#1F2A3D; --muted:#55606F; --body:#3E4858;
+  --accent:#A0561F; --line:#E4D7C8; --line-soft:#EFE6DA; --placeholder:#E9DED1;
+  --on-dark:#F6EFE6; --on-dark-muted:#C9D6E8; --logo-blue:#B9D0EE;
+  --story:#DFE8F4; --peach:#E8A37A; --border-soft:#C9D6E8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:var(--ink)}a:hover{color:var(--accent)}
+img{max-width:100%}
+.serif{font-family:'Fraunces',Georgia,serif}
+.wrap{max-width:1240px;margin:0 auto;padding-left:24px;padding-right:24px}
+.eyebrow{margin:0;font-size:14px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:999px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn-dark{background:var(--ink);color:var(--surface);border:none}
+.btn-dark:hover{color:var(--surface);opacity:.92}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(246,239,230,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.logo-link{display:flex;align-items:center;min-height:44px}
+.logo-link img{height:30px;width:auto;display:block}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-weight:500;font-size:16px}
+nav.main a{text-decoration:none}
+.cart-btn{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.badge{min-width:24px;height:24px;padding:0 7px;border-radius:999px;background:var(--accent);color:var(--surface);font-size:13px;display:inline-flex;align-items:center;justify-content:center}
+
+/* Hero */
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:56px;padding-top:72px;padding-bottom:88px}
+.hero-text{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hero h1{margin:0;font-weight:400;font-size:clamp(44px,6vw,80px);line-height:1.02;letter-spacing:-1.5px}
+.hero h1 em{font-style:italic}
+.lead{margin:0;max-width:480px;font-size:19px;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-pics{flex:1 1 460px;min-width:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:80px 1fr 120px}
+.hero-pics .main{grid-column:1/5;grid-row:1/3;width:100%;height:100%;min-height:520px;object-fit:cover;border-radius:6px}
+.hero-pics .inset{grid-column:3/6;grid-row:2/4;align-self:end;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px;border:8px solid var(--bg)}
+
+/* Value band */
+.band{background:var(--ink);color:var(--on-dark)}
+.band .wrap{padding-top:40px;padding-bottom:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.band h3{margin:0 0 6px;font-family:'Fraunces',serif;font-weight:400;font-size:22px;color:var(--logo-blue)}
+.band p{margin:0;color:var(--on-dark-muted);font-size:16px}
+
+/* Shop */
+#shop{padding-top:96px;padding-bottom:64px;display:flex;flex-direction:column;gap:36px}
+.shop-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px}
+.shop-head h2{margin:10px 0 0;font-weight:400;font-size:clamp(36px,4vw,56px);line-height:1.05;letter-spacing:-1px}
+.filters{display:flex;flex-wrap:wrap;gap:10px}
+.filters button{min-height:44px;padding:0 20px;border-radius:999px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:44px 28px}
+.card{display:flex;flex-direction:column;gap:12px}
+.card .pic{position:relative;border-radius:6px;overflow:hidden;background:var(--placeholder)}
+.card .pic img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .5s ease}
+.card:hover .pic img{transform:scale(1.03)}
+.tag{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:999px;background:var(--surface);font-size:13px;font-weight:600}
+.card .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.card h3{margin:0;font-family:'Fraunces',serif;font-weight:600;font-size:21px;line-height:1.2}
+.price{margin:0;font-weight:600;white-space:nowrap}
+.desc{margin:0;color:var(--muted);font-size:15.5px}
+.swatches{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.swatch{width:44px;height:44px;padding:0;border-radius:999px;cursor:pointer;border:2px solid var(--border-soft);box-shadow:inset 0 0 0 5px var(--bg)}
+.swatch[aria-pressed="true"]{border-color:var(--ink)}
+.swatch-label{margin-left:6px;font-size:14px;color:var(--muted)}
+.add{min-height:48px;border-radius:999px;border:none;background:var(--accent);color:var(--surface);font:inherit;font-weight:600;cursor:pointer}
+.add:hover{filter:brightness(1.08)}
+.more{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;min-height:360px;padding:32px;border:1.5px dashed #C9B7A4;border-radius:6px;text-align:center}
+.more p{margin:0}
+
+/* Split sections */
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.split > img{flex:1 1 400px;min-width:0;width:100%;max-width:540px;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.split .text{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.split h2{margin:0;font-weight:400;font-size:clamp(32px,3.6vw,52px);line-height:1.08;letter-spacing:-1px}
+.split p.body{margin:0;font-size:18px;color:var(--body)}
+.atelier{padding-top:32px;padding-bottom:96px}
+.story{background:var(--story)}
+.story .wrap{padding-top:96px;padding-bottom:96px}
+
+/* Service */
+#service{padding-top:88px;padding-bottom:88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px}
+#service h3{margin:0 0 8px;font-family:'Fraunces',serif;font-weight:600;font-size:22px}
+#service p{margin:0;color:var(--muted)}
+
+/* Newsletter */
+.newsletter{background:var(--peach);color:var(--ink)}
+.newsletter .wrap{padding-top:72px;padding-bottom:72px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px}
+.newsletter h2{margin:0 0 10px;font-weight:400;font-size:clamp(30px,3vw,42px);line-height:1.1}
+.newsletter p{margin:0;font-size:17px}
+.nl-form{flex:1 1 380px;display:flex;flex-wrap:wrap;gap:12px}
+.nl-form input{flex:1 1 220px;min-height:52px;padding:0 20px;border-radius:999px;border:none;font:inherit;color:var(--ink);background:var(--surface)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Footer */
+footer{background:var(--ink);color:var(--on-dark-muted)}
+footer .wrap{padding-top:48px;padding-bottom:48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;font-size:15px}
+footer img{height:28px;width:auto;display:block}
+footer p{margin:10px 0 0;font-size:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:24px}
+footer a{color:var(--on-dark-muted)}footer a:hover{color:var(--on-dark)}
+
+/* Cart drawer */
+.overlay{position:fixed;inset:0;z-index:50;background:rgba(31,42,61,.45);display:flex;justify-content:flex-end}
+.overlay[hidden]{display:none}
+.drawer{width:100%;max-width:420px;height:100%;background:var(--surface);display:flex;flex-direction:column}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line)}
+.drawer-head h2{margin:0;font-family:'Fraunces',serif;font-weight:600;font-size:26px}
+.icon-btn{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.drawer-body{flex:1 1 auto;overflow-y:auto;padding:8px 24px}
+.empty{margin:40px 0;color:var(--muted);text-align:center}
+.line{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft)}
+.line img{width:80px;height:104px;object-fit:cover;border-radius:4px;flex:none}
+.line .info{flex:1 1 auto;display:flex;flex-direction:column;gap:6px}
+.line p{margin:0}
+.line .sub{color:var(--muted);font-size:14px}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button.step{width:44px;height:44px;border-radius:999px;border:1px solid var(--border-soft);background:transparent;font:inherit;font-size:20px;cursor:pointer;color:var(--ink)}
+.qty span{min-width:20px;text-align:center;font-weight:600}
+.remove{margin-left:auto;min-height:44px;border:none;background:transparent;color:var(--muted);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
+.drawer-foot{padding:20px 24px 28px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.total{display:flex;justify-content:space-between;font-weight:600}
+.drawer-foot small{color:var(--muted);font-size:14px}
+
+@media (max-width:600px){
+  nav.main{gap:16px}
+  nav.main a{display:none}
+  .hero{padding-top:40px;gap:40px}
+  .hero-pics .main{min-height:380px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head">
+    <a class="logo-link" href="#top" aria-label="Loomy – zur Startseite"><img src="img/logo.png" alt="Loomy"></a>
+    <nav class="main" aria-label="Hauptnavigation">
+      <a href="#shop">Kollektion</a>
+      <a href="#geschichte">Geschichte</a>
+      <a href="#service">Versand &amp; Pflege</a>
+      <button class="cart-btn" id="openCart" aria-label="Warenkorb öffnen">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span>Warenkorb</span>
+        <span class="badge" id="cartBadge">0</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="top" class="wrap hero">
+  <div class="hero-text">
+    <p class="eyebrow">India Capsule W26 · Handgestrickt im Punjab</p>
+    <h1 class="serif">Masche für Masche.<br><em>Stück für Stück.</em></h1>
+    <p class="lead">Cardigans, Pullover und Jacken, von Hand gefertigt und inspiriert von indischer Textilkunst. Jedes Teil entsteht einzeln – mit Zeit, Farbe und einer eigenen Geschichte.</p>
+    <div class="actions">
+      <a class="btn btn-dark" href="#shop">Zur Kollektion</a>
+      <a class="btn btn-outline" href="#geschichte">Unsere Geschichte</a>
+    </div>
+  </div>
+  <div class="hero-pics">
+    <img class="main" src="img/rug.jpg" alt="Blauer Strick-Cardigan mit Dhurrie-Motiven, Rückansicht">
+    <img class="inset" src="img/phulkari.jpg" alt="Brauner Cardigan mit Phulkari-Motiven">
+  </div>
+</section>
+
+<section class="band" aria-label="Was uns ausmacht">
+  <div class="wrap">
+    <div><h3>Reine Handarbeit</h3><p>Gestrickt und gehäkelt von Hand, ohne Maschine.</p></div>
+    <div><h3>Merino &amp; Lammwolle</h3><p>Viele Stücke aus Merino- und Lammwolle, das Material steht bei jedem Teil.</p></div>
+    <div><h3>Indisches Erbe</h3><p>Muster aus Phulkari, Kantha und Dhurrie, gestrickt im Punjab.</p></div>
+  </div>
+</section>
+
+<section id="shop" class="wrap">
+  <div class="shop-head">
+    <div>
+      <p class="eyebrow">Shop</p>
+      <h2 class="serif">Die Kollektion</h2>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Kategorie filtern"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="wrap split atelier" aria-label="Aus dem Atelier">
+  <img src="img/spinning.jpg" alt="Eine Frau im grünen Sari spinnt Garn an einem hölzernen Spinnrad" loading="lazy">
+  <div class="text">
+    <p class="eyebrow">Aus dem Atelier</p>
+    <h2 class="serif">Jedes Stück beginnt am Spinnrad.</h2>
+    <p class="body">Ein grober Cardigan braucht [Anzahl] Stunden Handarbeit. Gestrickt wird im Punjab von [wer strickt].</p>
+  </div>
+</section>
+
+<section id="geschichte" class="story">
+  <div class="wrap split">
+    <img src="img/founder.jpg" alt="Die Gründerin im grauen Merino-Cardigan mit bunten Bubble-Ärmeln" loading="lazy">
+    <div class="text">
+      <p class="eyebrow">Unsere Geschichte</p>
+      <h2 class="serif">Tradition und Handwerk, neu verwoben.</h2>
+      <p class="body">Loomy übersetzt alte indische Textilkunst in Strick: die Stickerei der Phulkari, die Steppnähte der Kantha-Quilts, die Muster der Dhurrie-Teppiche aus Jodhpur. Entworfen und von Hand gestrickt im Punjab.</p>
+      <p class="body">[Name] hat Loomy gegründet, um [Idee der Marke in einem Satz].</p>
+      <p class="body" style="font-size:16px;color:var(--muted)">Im Bild: unsere Gründerin im Classic Merino Cardigan.</p>
+    </div>
+  </div>
+</section>
+
+<section id="service" class="wrap">
+  <div><h3>Versand</h3><p>[Versandland, Dauer und Kosten]</p></div>
+  <div><h3>Größen</h3><p>[Größentabelle oder Hinweis zu Oversized-Passform]</p></div>
+  <div><h3>Pflege</h3><p>[Waschhinweise je Garn, z. B. Merino / Lammwolle / Acryl]</p></div>
+  <div><h3>Rückgabe</h3><p>[Widerrufsfrist und Ablauf]</p></div>
+</section>
+
+<section class="newsletter" aria-label="Newsletter">
+  <div class="wrap">
+    <div style="flex:1 1 380px">
+      <h2 class="serif">Neue Stücke zuerst sehen</h2>
+      <p>Einzelstücke sind schnell weg. Wir schreiben dir, wenn etwas Neues fertig ist.</p>
+    </div>
+    <form class="nl-form" onsubmit="return false">
+      <label class="sr-only" for="nl-mail">E-Mail-Adresse</label>
+      <input id="nl-mail" type="email" placeholder="deine@email.de">
+      <button class="btn btn-dark" type="submit">Eintragen</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <img src="img/logo.png" alt="Loomy">
+      <p>Premium Sweaters – handgestrickt im Punjab, Indien</p>
+    </div>
+    <nav aria-label="Rechtliches">
+      <a href="#top">Impressum</a>
+      <a href="#top">Datenschutz</a>
+      <a href="#top">AGB</a>
+      <a href="#top">Widerruf</a>
+      <a href="#top">Kontakt</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden>
+  <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="drawer-head">
+      <h2 id="cartTitle">Warenkorb</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Warenkorb schließen">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot">
+      <div class="total"><span id="cartCount">0 Artikel</span><span>[Summe]</span></div>
+      <small>inkl. MwSt., zzgl. [Versandkosten]</small>
+      <button class="btn btn-dark" type="button">Zur Kasse</button>
+    </div>
+  </aside>
+</div>
+
+<script src="shop.js"></script>
+</body>
+</html>

@@ -172,6 +172,12 @@ h1 em{font-style:normal;color:var(--indigo)}
 .btn-ink{background:var(--ink);color:var(--paper)}
 .btn-ink:hover{filter:brightness(1.25)}
 .note{margin:0;font-size:13px;color:var(--ink-soft)}
+.alt{display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--ink-soft)}
+.alt-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;background:#FFFFFF;font:inherit;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;cursor:pointer}
+.chip:hover{border-color:var(--indigo-deep);color:var(--indigo-deep)}
+.chip:focus-visible{outline:3px solid var(--indigo-deep);outline-offset:2px}
+.copied{min-height:1em;font-weight:600;color:var(--indigo-deep)}
 .done{display:flex;flex-direction:column;gap:14px;padding-block:8px}
 .done img{width:84px;height:84px;display:block}
 .done p{margin:0;color:var(--ink-soft)}
@@ -343,6 +349,15 @@ footer a{color:#E8D5C6}footer a:hover{color:var(--sindoor-soft)}
       <h2>Sag uns Bescheid</h2>
       <p>Schreib uns eine kurze E-Mail. Wir melden uns einmal bei dir, sobald die erste Ware in Deutschland ist.</p>
       <a class="btn btn-ink" href="mailto:info@loomy.clothing?subject=Loomy%20%E2%80%93%20bitte%20benachrichtigen&amp;body=Hallo%20Patrick%2C%0A%0Abitte%20gib%20mir%20Bescheid%2C%20sobald%20Loomy%20in%20Deutschland%20erh%C3%A4ltlich%20ist.">E-Mail schreiben</a>
+      <div class="alt">
+        <span>Es öffnet sich kein Mailprogramm? Dann hier:</span>
+        <div class="alt-row">
+          <button type="button" class="chip" id="copyMail" data-mail="info@loomy.clothing">Adresse kopieren</button>
+          <a class="chip" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@loomy.clothing&amp;su=Loomy%20%E2%80%93%20bitte%20benachrichtigen&amp;body=Hallo%20Patrick%2C%0A%0Abitte%20gib%20mir%20Bescheid%2C%20sobald%20Loomy%20in%20Deutschland%20erh%C3%A4ltlich%20ist.">In Gmail schreiben</a>
+          <a class="chip" target="_blank" rel="noopener" href="https://outlook.live.com/mail/0/deeplink/compose?to=info@loomy.clothing&amp;subject=Loomy%20%E2%80%93%20bitte%20benachrichtigen&amp;body=Hallo%20Patrick%2C%0A%0Abitte%20gib%20mir%20Bescheid%2C%20sobald%20Loomy%20in%20Deutschland%20erh%C3%A4ltlich%20ist.">In Outlook schreiben</a>
+        </div>
+        <span class="copied" id="copyMsg" role="status" aria-live="polite"></span>
+      </div>
       <p class="note">Oder direkt an: <span class="mailtext">info@loomy.clothing</span>. Deine Adresse nutzen wir nur für diese eine Nachricht.</p>
     </div>
   </div>
@@ -538,6 +553,24 @@ footer a{color:#E8D5C6}footer a:hover{color:var(--sindoor-soft)}
     }
   });
   v.addEventListener('ended', () => { v.muted = true; show(false); });
+})();
+
+(function () {
+  const b = document.getElementById('copyMail'), msg = document.getElementById('copyMsg');
+  if (!b) return;
+  const mail = b.dataset.mail;
+  const fallback = () => {
+    const t = document.createElement('textarea');
+    t.value = mail; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+    document.body.appendChild(t); t.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    t.remove(); return ok;
+  };
+  b.addEventListener('click', async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(mail); ok = true; } catch (e) { ok = fallback(); }
+    msg.textContent = ok ? 'Kopiert: ' + mail + ' – einfach in dein Mailprogramm einfügen.' : 'Bitte von Hand kopieren: ' + mail;
+  });
 })();
 </script>
 </body>

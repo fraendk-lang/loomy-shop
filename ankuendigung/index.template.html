@@ -7,6 +7,9 @@
 <meta name="description" content="Loomy kommt nach Deutschland: handgestrickte Pullover und Cardigans aus dem Punjab, inspiriert von indischer Textilkunst. Die erste Ware ist bald da.">
 <meta name="theme-color" content="#FBF1E4">
 <link rel="canonical" href="https://loomy.clothing/">
+<link rel="alternate" hreflang="de" href="https://loomy.clothing/">
+<link rel="alternate" hreflang="en" href="https://loomy.clothing/en.html">
+<link rel="alternate" hreflang="x-default" href="https://loomy.clothing/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://loomy.clothing/">
 <meta property="og:title" content="Loomy kommt endlich nach Deutschland">
@@ -27,6 +30,7 @@
 @font-face{font-family:'Figtree';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/figtree-latin-500-normal.woff2) format('woff2')}
 @font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/figtree-latin-600-normal.woff2) format('woff2')}
 @font-face{font-family:'Josefin Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/josefin-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans Gurmukhi';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/noto-sans-gurmukhi-gurmukhi-500-normal.woff2) format('woff2')}
 @font-face{font-family:'Josefin Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/josefin-sans-latin-600-normal.woff2) format('woff2')}
 /* Layout: the round Loomy badge opens the page on its own cream ground; below it an
    orange thread runs from Punjab to Germany. Then: what is coming (paper),
@@ -56,7 +60,7 @@ a{color:var(--indigo-deep)}a:hover{color:var(--sindoor)}
 h1,h2,h3{text-wrap:balance}
 
 /* Opening */
-.hero{padding-block:48px 64px;display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center}
+.hero{position:relative;padding-block:64px 64px;display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center}
 .badge{width:clamp(220px,30vw,340px);max-width:100%;height:auto;display:block;animation:badgeIn 1.4s cubic-bezier(.2,.7,.2,1) both}
 .intro{display:flex;flex-direction:column;align-items:center;gap:24px;max-width:860px}
 .intro .label{color:var(--sindoor)}
@@ -198,6 +202,15 @@ footer a{color:#E8D5C6}footer a:hover{color:var(--sindoor-soft)}
 .sound:hover{color:var(--sindoor);border-color:var(--sindoor-soft)}
 .sound svg{width:16px;height:16px}
 .sound [hidden]{display:none}
+/* Language switch */
+.lang{position:absolute;top:max(12px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));display:flex;gap:4px;font-family:var(--label);font-size:14px;font-weight:600;letter-spacing:2px}
+.lang a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;border-radius:999px;color:var(--ink-soft);text-decoration:none}
+.lang a:hover{color:var(--sindoor)}
+.lang a[aria-current]{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+/* Greeting in Punjabi, at the start of the thread */
+.greet{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.greet .pa{margin:0;font-family:'Noto Sans Gurmukhi',var(--body);font-weight:500;font-size:clamp(24px,3vw,32px);line-height:1.5;color:var(--sindoor)}
+.greet .tr{margin:0;font-size:15px;color:var(--ink-soft)}
 .sound[aria-pressed="true"]{color:var(--sindoor);border-color:var(--sindoor-soft)}
 .card p{margin:0;color:var(--ink-soft)}
 .mailtext{font-weight:600;color:var(--indigo-deep);user-select:all;overflow-wrap:anywhere}
@@ -205,6 +218,7 @@ footer a{color:#E8D5C6}footer a:hover{color:var(--sindoor-soft)}
 </style>
 </head>
 <body>
+<nav class="lang" aria-label="Sprache"><a href="./" hreflang="de" lang="de" aria-current="page">DE</a><a href="en.html" hreflang="en" lang="en">EN</a></nav>
 
 <section class="wrap hero">
   <div class="intro-film">
@@ -240,6 +254,7 @@ footer a{color:#E8D5C6}footer a:hover{color:var(--sindoor-soft)}
       <span class="to">Deutschland · ab sofort</span>
     </div>
   </div>
+{{PUNJABI_BLOCK}}
 </section>
 
 <section class="coming">

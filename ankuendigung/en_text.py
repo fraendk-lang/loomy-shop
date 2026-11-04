@@ -95,6 +95,8 @@ PAIRS = [
      "'Copied: ' + mail + ' – just paste it into your mail app.' : 'Please copy by hand: ' + mail"),
     ('<p class="note">Oder direkt an: ', '<p class="note">Or write directly to: '),
     ('. Deine Adresse nutzen wir nur für diese eine Nachricht.</p>', '. We only use your address for this one message.</p>'),
+    ('<a class="brand" href="#" title="Nach oben">', '<a class="brand" href="#" title="Back to top">'),
+    ('alt="Loomy – nach oben"', 'alt="Loomy – back to top"'),
     ('<nav aria-label="Rechtliches">', '<nav aria-label="Legal">'),
     ('<a href="#kontakt">Kontakt</a>', '<a href="#kontakt">Contact</a>'),
     ('<a href="impressum.html">Impressum</a>', '<a href="impressum.html">Legal notice (German)</a>'),

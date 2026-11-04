@@ -188,7 +188,10 @@ h1 em{font-style:normal;color:var(--indigo)}
 
 footer{background:var(--ink);color:#E8D5C6}
 footer .wrap{padding-block:44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;font-size:15px}
-footer .brand{display:flex;align-items:center;gap:16px}
+footer .brand{display:flex;align-items:center;gap:16px;text-decoration:none}
+footer .brand img{transition:transform .3s ease}
+footer .brand:hover img{transform:translateY(-4px)}
+@media (prefers-reduced-motion: reduce){footer .brand img{transition:none}}
 footer img{width:56px;height:56px;display:block}
 footer .brand p{margin:0;font-family:var(--label);font-size:14px;letter-spacing:2.4px;text-transform:uppercase}
 footer nav{display:flex;flex-wrap:wrap;gap:24px}
@@ -380,10 +383,10 @@ footer a{color:#E8D5C6}footer a:hover{color:var(--sindoor-soft)}
 
 <footer>
   <div class="wrap">
-    <div class="brand">
-      <img src="img/loomy-badge.webp" alt="Loomy">
+    <a class="brand" href="#" title="Back to top">
+      <img src="img/loomy-badge.webp" alt="Loomy – back to top">
       <p>Knitwear from India · Loomy Germany</p>
-    </div>
+    </a>
     <nav aria-label="Legal">
       <a href="#kontakt">Contact</a>
       <a href="impressum.html">Legal notice (German)</a>

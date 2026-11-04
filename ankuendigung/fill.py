@@ -10,7 +10,7 @@ DATA = {
     "EMAIL": "",            # Kontakt-Adresse, z. B. hallo@loomy.clothing
     "EMAIL_HANDEL": "",     # leer lassen = gleiche Adresse wie EMAIL
     "FIRMA": "",            # Firmenname mit Rechtsform
-    "ADRESSE": "",          # Straße Nr., PLZ Ort  (Zeilenumbruch mit \n)
+    "ADRESSE": "Altenrather Straße 150\n53797 Lohmar",  # Straße Nr., PLZ Ort
     "TELEFON": "",
     "REGISTER": "",         # optional, z. B. "Amtsgericht Köln, HRB 12345"
     "USTID": "",            # optional, z. B. "DE123456789"

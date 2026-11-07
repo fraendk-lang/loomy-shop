@@ -19,7 +19,7 @@ DATA = {
     # Vorschau ohne Bestätigung: python3 fill.py --vorschau
     "PUNJABI": "",
     # Profile von Loomy Germany (volle Adresse mit https://). Leer = Symbol wird nicht gezeigt.
-    "INSTAGRAM": "",
+    "INSTAGRAM": "https://www.instagram.com/loomy_germany/",
     "FACEBOOK": "https://www.facebook.com/share/1DFY4FpsPG",
     "YOUTUBE": "",
 }

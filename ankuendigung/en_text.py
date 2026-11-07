@@ -106,6 +106,7 @@ PAIRS = [
 
 def to_english(text):
     # the mail subject/body appear three times each (mailto, Gmail, Outlook)
+    text = text.replace('aria-label="Loomy Germany auf ', 'aria-label="Loomy Germany on ')
     text = text.replace(DE_SUBJ, EN_SUBJ).replace(DE_BODY, EN_BODY)
     text = text.replace('<p class="tr">Mit Liebe gestrickt im Punjab</p>', '<p class="tr">Knitted with love in Punjab</p>')
     for de, en in PAIRS:

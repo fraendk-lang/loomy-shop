@@ -21,7 +21,7 @@ DATA = {
     # Profile von Loomy Germany (volle Adresse mit https://). Leer = Symbol wird nicht gezeigt.
     "INSTAGRAM": "https://www.instagram.com/loomy_germany/",
     "FACEBOOK": "https://www.facebook.com/share/1DFY4FpsPG",
-    "YOUTUBE": "",
+    "YOUTUBE": "https://www.youtube.com/@loomygermany",
 }
 PUNJABI_ENTWURF = "ਪੰਜਾਬ ਵਿੱਚ ਪਿਆਰ ਨਾਲ ਬੁਣਿਆ"   # „Mit Liebe gestrickt im Punjab“
 

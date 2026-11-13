@@ -23,7 +23,7 @@ DATA = {
     "FACEBOOK": "https://www.facebook.com/share/1DFY4FpsPG",
     "YOUTUBE": "https://www.youtube.com/@loomygermany",
 }
-PUNJABI_ENTWURF = "ਪੰਜਾਬ ਵਿੱਚ ਪਿਆਰ ਨਾਲ ਬੁਣਿਆ"   # „Mit Liebe gestrickt im Punjab“
+PUNJABI_ENTWURF = "ਪੰਜਾਬ ਵਿੱਚ ਪਿਆਰ ਨਾਲ ਬੁਣਿਆ"   # „Mit Liebe gestrickt in Punjab“
 
 here = pathlib.Path(__file__).parent
 draft = "--entwurf" in sys.argv   # test build: empty fields show as "[folgt]"
@@ -49,7 +49,7 @@ esc["TELEFON_TAIL"] = ("<br>Telefon: %s" % esc["TELEFON"]) if esc["TELEFON"] els
 esc["REGISTER_BLOCK"] = ("<h2>Registereintrag</h2>\n  <p>%s</p>" % esc["REGISTER"]) if esc["REGISTER"] else ""
 esc["USTID_BLOCK"] = ("<h2>Umsatzsteuer-ID</h2>\n  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: %s</p>" % esc["USTID"]) if esc["USTID"] else ""
 
-esc["PUNJABI_BLOCK"] = ('  <div class="greet">\n    <p class="pa" lang="pa">%s</p>\n    <p class="tr">Mit Liebe gestrickt im Punjab</p>\n  </div>' % esc["PUNJABI"]) if esc["PUNJABI"] else ""
+esc["PUNJABI_BLOCK"] = ('  <div class="greet">\n    <p class="pa" lang="pa">%s</p>\n    <p class="tr">Mit Liebe gestrickt in Punjab</p>\n  </div>' % esc["PUNJABI"]) if esc["PUNJABI"] else ""
 
 ICONS = {
     "INSTAGRAM": ("Instagram", '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/>'),

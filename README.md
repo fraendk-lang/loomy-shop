@@ -1,6 +1,6 @@
 # Loomy – Landingpage & Shop (Entwurf)
 
-Landingpage mit Shop-Bereich für **Loomy**, handgestrickte Strickmode aus dem Punjab, Indien (India Capsule W26).
+Landingpage mit Shop-Bereich für **Loomy**, handgestrickte Strickmode aus Punjab, Indien (India Capsule W26).
 
 - `index.html` – Seite (HTML + CSS)
 - `shop.js` – Produktdaten, Filter, Farbvarianten, Warenkorb

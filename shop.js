@@ -2,9 +2,9 @@
 const PRODUCTS = [
   { id: 'rug', cat: 'cardigans', heritage: true, tag: 'Heritage', name: 'Rajasthani Rug Cardigan', desc: 'Inspiriert von den Dhurrie-Teppichen und Handwebstühlen aus Jodhpur.', img: 'rug.jpg', alt: 'Blauer Strick-Cardigan mit Dhurrie-Motiven, Rückansicht' },
   { id: 'kantha', cat: 'cardigans', heritage: true, tag: 'Heritage', name: 'Kantha Quilt Cardigan', desc: 'Inspiriert von den traditionellen Kantha-Quilts aus Bengalen.', img: 'kantha.jpg', alt: 'Cremefarbener Cardigan mit Kantha-Dreiecksmustern am Bügel' },
-  { id: 'phulkari', cat: 'cardigans', heritage: true, tag: 'Heritage', name: 'Punjabi Phulkari Cardigan', desc: 'Trägt das Erbe der Phulkari-Stickerei aus dem Punjab weiter.', img: 'phulkari.jpg', alt: 'Brauner Cardigan mit pinken, orangen und gelben Phulkari-Motiven' },
+  { id: 'phulkari', cat: 'cardigans', heritage: true, tag: 'Heritage', name: 'Punjabi Phulkari Cardigan', desc: 'Trägt das Erbe der Phulkari-Stickerei aus Punjab weiter.', img: 'phulkari.jpg', alt: 'Brauner Cardigan mit pinken, orangen und gelben Phulkari-Motiven' },
   { id: 'parakeet', cat: 'pullover', heritage: true, tag: 'Heritage', name: 'Nostalgic Parakeet Sweater', desc: 'Motive wie vom indischen Geschirr der 80er und 90er Jahre.', img: 'parakeet.jpg', alt: 'Cremefarbener Pullover mit zwei gestrickten Sittichen' },
-  { id: 'teeset', cat: 'pullover', heritage: true, tag: 'Heritage', name: '[Name] Sweater & Short Sleeve Tee', desc: 'Entworfen, eingekauft und gestrickt im Punjab, Indien.', img: 'teeset.jpg', alt: 'Naturfarbene Strickjacke und kurzärmeliger Strickpullover' },
+  { id: 'teeset', cat: 'pullover', heritage: true, tag: 'Heritage', name: '[Name] Sweater & Short Sleeve Tee', desc: 'Entworfen, eingekauft und gestrickt in Punjab, Indien.', img: 'teeset.jpg', alt: 'Naturfarbene Strickjacke und kurzärmeliger Strickpullover' },
   { id: 'lotus', cat: 'cardigans', tag: 'Cardigan', name: 'Lotus Petal Cardigan', desc: 'Lange Strickjacke mit grobem Blattzopf, angelehnt an Lotusblüten.', variants: [
     { label: 'Rot · Acryl', color: '#C42A21', img: 'lotus_red.jpg', alt: 'Roter Lotus Petal Cardigan' },
     { label: 'Schwarz · Merino', color: '#1E1C1C', img: 'lotus_black.jpg', alt: 'Schwarzer Lotus Petal Cardigan aus Merino' },

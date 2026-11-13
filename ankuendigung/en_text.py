@@ -10,14 +10,14 @@ EN_BODY = quote("Hi Patrick,\n\nplease let me know as soon as Loomy is available
 
 PAIRS = [
     ('<html lang="de">', '<html lang="en">'),
-    ('<title>Loomy Germany – Handgestrickt im Punjab, bald in Deutschland</title>',
+    ('<title>Loomy Germany – Handgestrickt in Punjab, bald in Deutschland</title>',
      '<title>Loomy Germany – Hand-knitted in Punjab, coming to Germany</title>'),
-    ('content="Loomy kommt nach Deutschland: handgestrickte Pullover und Cardigans aus dem Punjab, inspiriert von indischer Textilkunst. Die erste Ware ist bald da."',
+    ('content="Loomy kommt nach Deutschland: handgestrickte Pullover und Cardigans aus Punjab, inspiriert von indischer Textilkunst. Die erste Ware ist bald da."',
      'content="Loomy is coming to Germany: hand-knitted jumpers and cardigans from Punjab, inspired by Indian textile art. The first pieces arrive soon."'),
     ('<link rel="canonical" href="https://loomy.clothing/">', '<link rel="canonical" href="https://loomy.clothing/en.html">'),
     ('<meta property="og:url" content="https://loomy.clothing/">', '<meta property="og:url" content="https://loomy.clothing/en.html">'),
     ('content="Loomy kommt endlich nach Deutschland"', 'content="Loomy is finally coming to Germany"'),
-    ('content="Handgestrickte Pullover und Cardigans aus dem Punjab – Masche für Masche, inspiriert von indischer Textilkunst."',
+    ('content="Handgestrickte Pullover und Cardigans aus Punjab – Masche für Masche, inspiriert von indischer Textilkunst."',
      'content="Hand-knitted jumpers and cardigans from Punjab – stitch by stitch, inspired by Indian textile art."'),
     ('content="de_DE"', 'content="en_GB"'),
     ('<nav class="lang" aria-label="Sprache"><a href="./" hreflang="de" lang="de" aria-current="page">DE</a><a href="en.html" hreflang="en" lang="en">EN</a></nav>',
@@ -27,18 +27,18 @@ PAIRS = [
     ("on ? 'Ton aus' : 'Ton an'", "on ? 'Sound off' : 'Sound on'"),
     ('<p class="label">Bald in Deutschland</p>', '<p class="label">Coming to Germany</p>'),
     ('<h1>Loomy kommt <em>endlich</em> nach Deutschland.</h1>', '<h1>Loomy is <em>finally</em> coming to Germany.</h1>'),
-    ('<p class="lead">Handgestrickte Pullover und Cardigans aus dem Punjab – Masche für Masche, inspiriert von indischer Textilkunst.</p>',
+    ('<p class="lead">Handgestrickte Pullover und Cardigans aus Punjab – Masche für Masche, inspiriert von indischer Textilkunst.</p>',
      '<p class="lead">Hand-knitted jumpers and cardigans from Punjab – stitch by stitch, inspired by Indian textile art.</p>'),
     ('>Sag mir Bescheid</a>', '>Let me know</a>'),
     ('<span class="hint">Eine Nachricht, sobald die Ware da ist. Kein Spam.</span>',
      '<span class="hint">One message when the first pieces arrive. No spam.</span>'),
-    ('aria-label="Ein Faden läuft vom Punjab bis nach Deutschland"', 'aria-label="A thread runs from Punjab all the way to Germany"'),
+    ('aria-label="Ein Faden läuft von Punjab bis nach Deutschland"', 'aria-label="A thread runs from Punjab all the way to Germany"'),
     ('<span class="from">Punjab, Indien</span>', '<span class="from">Punjab, India</span>'),
     ('<span>rund 5.700 km Luftlinie</span>', '<span>about 5,700 km as the crow flies</span>'),
     ('<span class="to">Deutschland · ab sofort</span>', '<span class="to">Germany · from now on</span>'),
     ('<h2>Was mit Loomy nach Deutschland kommt.</h2>', '<h2>What Loomy brings to Germany.</h2>'),
     ('<h3>Von Hand gestrickt</h3>', '<h3>Knitted by hand</h3>'),
-    ('<p>Jedes Stück entsteht Masche für Masche im Punjab – ohne Maschine, mit Zeit und Geduld.</p>',
+    ('<p>Jedes Stück entsteht Masche für Masche in Punjab – ohne Maschine, mit Zeit und Geduld.</p>',
      '<p>Every piece is made stitch by stitch in Punjab – no machines, just time and patience.</p>'),
     ('<h3>Indisches Erbe</h3>', '<h3>Indian heritage</h3>'),
     ('<p>Muster aus Phulkari-Stickerei, Kantha-Quilts und Dhurrie-Teppichen, neu übersetzt in Strick.</p>',
@@ -66,7 +66,7 @@ PAIRS = [
     ('alt="Eine Frau im grünen Sari spinnt Garn an einem hölzernen Spinnrad"', 'alt="A woman in a green sari spins yarn on a wooden spinning wheel"'),
     ('<p class="label">Aus dem Atelier</p>', '<p class="label">From the workshop</p>'),
     ('<h2>Jedes Stück beginnt mit einem Faden.</h2>', '<h2>Every piece begins with a thread.</h2>'),
-    ('<p class="body">Eingekauft und gestrickt wird im Punjab, in der Region, aus der viele unserer Muster stammen. Jeder Pullover geht dort durch viele Hände, bevor er die Reise nach Deutschland antritt.</p>',
+    ('<p class="body">Eingekauft und gestrickt wird in Punjab – der Region, aus der viele unserer Muster stammen. Jeder Pullover geht dort durch viele Hände, bevor er die Reise nach Deutschland antritt.</p>',
      '<p class="body">The yarn is bought and knitted in Punjab, the region many of our patterns come from. Every jumper passes through many hands there before it sets off for Germany.</p>'),
     ('<p class="caption">Im Bild: Garn am Spinnrad.</p>', '<p class="caption">Pictured: yarn on the spinning wheel.</p>'),
     ('<h2>Dein Ansprechpartner in Deutschland.</h2>', '<h2>Your contact in Germany.</h2>'),
@@ -81,7 +81,7 @@ PAIRS = [
     ('?subject=H%C3%A4ndleranfrage%20Loomy', '?subject=' + quote("Trade enquiry Loomy", safe="")),
     ('<p class="label">Ab sofort in Deutschland</p>', '<p class="label">In Germany from now on</p>'),
     ('<p class="big">Die erste Ware ist <em>bald da.</em></p>', '<p class="big">The first pieces <em>arrive soon.</em></p>'),
-    ('<p class="sub">Wir warten noch auf die erste Lieferung aus dem Punjab. Schreib uns, dann sagen wir dir Bescheid, sobald die ersten Stücke hier sind.</p>',
+    ('<p class="sub">Wir warten noch auf die erste Lieferung aus Punjab. Schreib uns, dann sagen wir dir Bescheid, sobald die ersten Stücke hier sind.</p>',
      '<p class="sub">We are still waiting for the first delivery from Punjab. Write to us and we will let you know as soon as the first pieces are here.</p>'),
     ('<h2>Sag uns Bescheid</h2>', '<h2>Get in touch</h2>'),
     ('<p>Schreib uns eine kurze E-Mail. Wir melden uns einmal bei dir, sobald die erste Ware in Deutschland ist.</p>',
@@ -108,7 +108,7 @@ def to_english(text):
     # the mail subject/body appear three times each (mailto, Gmail, Outlook)
     text = text.replace('aria-label="Loomy Germany auf ', 'aria-label="Loomy Germany on ')
     text = text.replace(DE_SUBJ, EN_SUBJ).replace(DE_BODY, EN_BODY)
-    text = text.replace('<p class="tr">Mit Liebe gestrickt im Punjab</p>', '<p class="tr">Knitted with love in Punjab</p>')
+    text = text.replace('<p class="tr">Mit Liebe gestrickt in Punjab</p>', '<p class="tr">Knitted with love in Punjab</p>')
     for de, en in PAIRS:
         n = text.count(de)
         if n != 1:
